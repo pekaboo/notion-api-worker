@@ -206,4 +206,5 @@ export interface HandlerRequest {
   searchParams: URLSearchParams;
   request: Request;
   notionToken?: string;
+  text?: string;
 }

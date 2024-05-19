@@ -10,6 +10,7 @@
     "deploy": "wrangler publish -e production src/index"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "tiny-request-router": "^1.2.2"
   },
   "devDependencies": {

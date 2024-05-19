@@ -5,6 +5,7 @@ import { pageRoute } from "./routes/page";
 import { tableRoute } from "./routes/table";
 import { userRoute } from "./routes/user";
 import { searchRoute } from "./routes/search";
+import { testApiIndex } from "./routes/testApi";
 import { createResponse } from "./response";
 import { getCacheKey } from "./get-cache-key";
 import * as types from "./api/types";
@@ -26,6 +27,7 @@ router.get("/v1/page/:pageId", pageRoute);
 router.get("/v1/table/:pageId", tableRoute);
 router.get("/v1/user/:userId", userRoute);
 router.get("/v1/search", searchRoute);
+router.post("/testapi", testApiIndex);
 
 router.get("*", async () =>
   createResponse(
