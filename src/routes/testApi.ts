@@ -4,7 +4,6 @@ import { HandlerRequest } from "../api/types";
 import { parsePageId } from "../api/utils";
 
 export async function testApiIndex(req : any) {
-export async function testApiIndex(req : any) {
   const host = req.request.headers.get('host');
   const fullUrl = req.request.url;
   const clientIp = req.request.headers.get('CF-Connecting-IP');
