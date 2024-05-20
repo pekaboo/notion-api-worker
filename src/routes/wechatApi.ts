@@ -1,5 +1,6 @@
 import { createResponse } from "../response";
 export async function wechatApiGet(req : any) {
+  await sendMessage("wechat callback get",'wxid_1axvc5m7w4so21')
   return createResponse("wechat callback");
 }
 
@@ -43,7 +44,7 @@ async function handleChatGPTMessage(content: string, sender: string) {
 async function handleMessage(content: string, sender: string) {
   if(content === "/help"){
       // await handleHelp(content, sender);
-      sendMessage("need help...",sender)
+      await sendMessage("need help...",sender)
   } else {
       await handleChatGPTMessage(content, sender);
   }
